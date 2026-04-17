@@ -1,17 +1,23 @@
 import random
+import sys
 from datetime import datetime
 from pathlib import Path
+
+def get_base_path():
+    if getattr(sys, 'frozen', False):
+        return Path(sys.executable).parent
+    return Path(__file__).parent
 
 from char import hiragana
 
 # Crear la carpeta del historial si no existe
-RECORD_FOLDER = Path(__file__).parent / "data"
+RECORD_FOLDER = get_base_path().parent / "data"
 
 # Si existe, ignorar la creación
 RECORD_FOLDER.mkdir(exist_ok=True)
 
 # Directorio del archivo de historial
-RECORD_FILE = Path(__file__).parent / "data" / "record.txt"
+RECORD_FILE = get_base_path() "data" / "record.txt"
 
 # Obtener fecha
 now = datetime.now()
