@@ -10,3 +10,8 @@ Memoriza y aprende el alfabeto Hiragana usando la terminal de tu equipo.
 - [] Implementación de dakuten/handakuten.
 - [] Implementación de Katakana.
 - [] Implementación de combinación de Kanas (Yo-on)
+
+### Instalación:
+
+* Compilación con PyInstaller
+* Descargar último release estable (v.1.2)
